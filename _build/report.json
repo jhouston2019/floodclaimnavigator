@@ -1,0 +1,29 @@
+{
+  "created": [
+    "public/advisory/index.html",
+    "public/maximize/index.html",
+    "public/tactics/index.html",
+    "public/state-rights/index.html",
+    "public/trackers/index.html",
+    "public/evidence/index.html",
+    "public/settlement/index.html",
+    "public/negotiation/index.html",
+    "public/litigation/index.html",
+    "public/calculator/index.html",
+    "public/marketplace/index.html",
+    "public/documents/appeal-letter.html",
+    "public/documents/demand-letter.html",
+    "public/documents/damage-inventory.html",
+    "public/documents/claim-timeline.html",
+    "public/documents/repair-vs-replace.html",
+    "public/documents/expenses-log.html",
+    "public/documents/appraisal-demand.html",
+    "public/documents/delay-complaint.html",
+    "public/documents/coverage-clarification.html",
+    "public/response-center/claim-analysis-tools/damage-assessment.html",
+    "public/response-center/claim-analysis-tools/estimate-comparison.html",
+    "public/response-center/claim-analysis-tools/business-interruption.html",
+    "public/response-center/claim-analysis-tools/settlement-analysis.html"
+  ],
+  "skipped": []
+}
