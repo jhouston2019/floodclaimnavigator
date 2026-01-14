@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flood Waterline Documentation Guide — FEMA & NFIP Evidence Standards</title>
+  <meta name="description" content="Learn how to document flood waterlines correctly for FEMA and NFIP claims. Understand waterline measurements, depth documentation, and standing water duration requirements.">
+  
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #0C4A6E;
+      --primary-dark: #0F172A;
+      --accent: #38BDF8;
+      --text-primary: #0B1220;
+      --text-secondary: #475569;
+      --bg-white: #F8FAFC;
+      --bg-light: #F1F5F9;
+      --border: #CBD5E1;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #ffffff;
+    }
+    
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      border-bottom: 1px solid #e5e7eb;
+    }
+    
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0B2545;
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    
+    .nav-links a {
+      color: #4b5563;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover {
+      color: #17BEBB;
+    }
+    
+    .btn-primary {
+      background: #0C4A6E;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s ease;
+      display: inline-block;
+    }
+    
+    .btn-primary:hover {
+      background: #13a09d;
+    }
+    
+    .hero-section {
+      background: linear-gradient(135deg, #0C4A6E 0%, #38BDF8 45%, #0F172A 100%);
+      padding: 5rem 0;
+      text-align: center;
+      color: white;
+    }
+    
+    .hero-section h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+    }
+    
+    .hero-section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      color: #ffffff;
+    }
+    
+    section {
+      padding: 4rem 0;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #1f2937;
+      text-align: center;
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #4b5563;
+      margin-bottom: 1rem;
+    }
+    
+    ul {
+      list-style: disc;
+      padding-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    ul li {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+    }
+    
+    .content-section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .cta-section {
+      background: #F7F9FC;
+      padding: 3rem 2rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      margin: 3rem auto;
+      max-width: 700px;
+    }
+    
+    .cta-section h3 {
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-section p {
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+    
+    footer {
+      background: #F7F9FC;
+      padding: 3rem 0;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+    }
+    
+    footer p {
+      color: #4b5563;
+      font-size: 0.9rem;
+    }
+    
+    footer a {
+      color: #4b5563;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    
+    footer a:hover {
+      color: #17BEBB;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 1.8rem;
+      }
+      
+      .hero-section {
+        padding: 3rem 0;
+      }
+      
+      section {
+        padding: 2rem 0;
+      }
+      
+      h2 {
+        font-size: 1.6rem;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/" class="logo">Flood Claim Navigator</a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="/" class="btn-primary">Get Flood Claim Help</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="container">
+      <h1>Flood Waterline Documentation Guide</h1>
+      <p>Learn how to document flood waterlines correctly for FEMA and NFIP claims. Proper waterline evidence is critical for flood claim approval and accurate damage evaluation.</p>
+      <a href="/" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Get Help With Your Flood Claim</a>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-section">
+      <h2>Why Waterline Documentation Matters</h2>
+      <p>Waterline documentation is the foundation of every FEMA and NFIP flood insurance claim. Without proper waterline evidence, adjusters cannot accurately evaluate flood damage—regardless of how severe the flooding was.</p>
+      
+      <p>FEMA and NFIP require waterline documentation to determine:</p>
+      <ul>
+        <li>The extent of structural damage to your property</li>
+        <li>Which contents were affected by floodwater</li>
+        <li>Contamination levels and exposure duration</li>
+        <li>Emergency mitigation requirements</li>
+        <li>Secondary damage from moisture and mold</li>
+      </ul>
+      
+      <p>Missing waterline evidence is one of the most common reasons flood claims get delayed, underpaid, or denied. Proper waterline documentation prevents these problems.</p>
+    </div>
+  </section>
+
+  <section class="container" style="background: #F7F9FC;">
+    <div class="content-section">
+      <h2>What FEMA & NFIP Require for Waterline Evidence</h2>
+      
+      <h3>Waterline Height Measurements</h3>
+      <p>Measure and document the highest point floodwater reached on your property. Use a measuring tape from the floor to the waterline mark on walls, doors, or fixtures. Record measurements in inches or feet.</p>
+      
+      <h3>Waterline Photos</h3>
+      <p>Take clear photos of waterline marks on walls, doors, appliances, and furniture. Include a measuring tape or ruler in photos to show scale. Photograph waterlines from multiple angles and locations throughout your property.</p>
+      
+      <h3>Standing Water Duration</h3>
+      <p>Document how long standing water remained in your property. Record the date and time floodwater entered, the date and time water was removed, and the total duration of standing water exposure.</p>
+      
+      <h3>Depth Measurements</h3>
+      <p>Measure the depth of standing water at multiple locations throughout your property. Document depth measurements with photos and written records. Include measurements from different rooms and areas affected by flooding.</p>
+      
+      <h3>Waterline Affidavits</h3>
+      <p>Prepare a written affidavit describing the flood event, waterline height, standing water duration, and contamination sources. Include witness statements from neighbors or emergency responders if available.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-section">
+      <h2>How to Document Waterlines Correctly</h2>
+      <p>Follow these steps to document flood waterlines that meet FEMA and NFIP evidence standards:</p>
+      
+      <ul>
+        <li><strong>Document immediately:</strong> Take waterline photos as soon as it's safe to enter your property</li>
+        <li><strong>Measure accurately:</strong> Use a measuring tape to record exact waterline heights from floor to waterline mark</li>
+        <li><strong>Photograph thoroughly:</strong> Take photos of waterlines on walls, doors, appliances, and furniture from multiple angles</li>
+        <li><strong>Include scale references:</strong> Place a measuring tape or ruler in photos to show waterline height</li>
+        <li><strong>Record timestamps:</strong> Document the date and time of flooding, water removal, and photo evidence</li>
+        <li><strong>Preserve waterline marks:</strong> Don't clean or remove waterline marks until after adjuster inspection</li>
+        <li><strong>Document contamination:</strong> Identify and photograph contamination sources (sewage, debris, mud)</li>
+      </ul>
+      
+      <p>Complete waterline documentation prevents "insufficient evidence" denials and supports accurate flood damage evaluation.</p>
+    </div>
+  </section>
+
+  <div class="cta-section container">
+    <h3>Document Your Flood Waterlines Correctly</h3>
+    <p>Stop guessing what FEMA and NFIP need. Get the complete waterline documentation system with measurement templates, photo guides, and affidavit builders.</p>
+    <a href="/" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Start Your Flood Claim</a>
+  </div>
+
+  <section class="container" style="background: #F7F9FC;">
+    <div class="content-section">
+      <h2>Common Waterline Documentation Mistakes</h2>
+      <p>Avoid these common errors that weaken flood claims:</p>
+      
+      <ul>
+        <li><strong>Cleaning before documentation:</strong> Removing waterline marks before taking photos and measurements</li>
+        <li><strong>Missing measurements:</strong> Taking photos without including measuring tape or scale references</li>
+        <li><strong>Incomplete coverage:</strong> Documenting waterlines in only one room instead of throughout the property</li>
+        <li><strong>No timestamp records:</strong> Failing to document when flooding occurred and how long water remained</li>
+        <li><strong>Poor photo quality:</strong> Blurry or poorly lit photos that don't clearly show waterline marks</li>
+        <li><strong>Missing affidavits:</strong> No written statement describing the flood event and waterline evidence</li>
+      </ul>
+      
+      <p>These documentation gaps give adjusters reasons to question your flood claim—even when the damage is legitimate.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-section">
+      <h2>How Flood Claim Navigator Helps</h2>
+      <p>Flood Claim Navigator provides the complete waterline documentation system for FEMA and NFIP claims:</p>
+      
+      <ul>
+        <li><strong>Waterline Measurement Templates:</strong> Step-by-step guides for recording waterline heights and depth measurements</li>
+        <li><strong>Photo Documentation Checklists:</strong> Ensure you capture all required waterline evidence with proper scale references</li>
+        <li><strong>Standing Water Duration Tracker:</strong> Document when flooding occurred and how long water remained</li>
+        <li><strong>Waterline Affidavit Builder:</strong> Generate professional affidavits describing flood events and waterline evidence</li>
+        <li><strong>Contamination Documentation Tools:</strong> Identify and document contamination sources and floodwater categories</li>
+        <li><strong>Evidence Organization System:</strong> Organize all waterline documentation for adjuster review</li>
+      </ul>
+      
+      <p>This system ensures you have the complete waterline evidence FEMA and NFIP adjusters require to process your flood claim correctly.</p>
+    </div>
+  </section>
+
+  <section class="container" style="background: #F7F9FC;">
+    <div class="content-section">
+      <h2>When to Document Waterlines</h2>
+      <p>Timing is critical for waterline documentation:</p>
+      
+      <ul>
+        <li><strong>During flooding:</strong> If safe, take photos of standing water depth and floodwater entering your property</li>
+        <li><strong>Immediately after water recedes:</strong> Document waterline marks before cleaning or repairs begin</li>
+        <li><strong>Before adjuster inspection:</strong> Preserve waterline marks until after the adjuster has inspected your property</li>
+        <li><strong>Throughout mitigation:</strong> Document waterline evidence during emergency dry-out and water extraction</li>
+      </ul>
+      
+      <p>Once waterline marks are cleaned or removed, they cannot be recreated. Document waterlines as soon as it's safe to do so.</p>
+    </div>
+  </section>
+
+  <div class="cta-section container">
+    <h3>Get the Complete Waterline Documentation System</h3>
+    <p>Navigate your flood claim with confidence. Professional waterline documentation templates. Complete measurement guides. Proper evidence standards.</p>
+    <a href="/" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Use Flood Claim Navigator</a>
+    <p style="margin-top: 1.5rem; font-size: 0.95rem;"><a href="/" style="color: #0C4A6E; text-decoration: underline;">Return to Flood Claim Navigator Home</a></p>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p><a href="/">Flood Claim Navigator Home</a> | <a href="/#pricing">Pricing</a> | <a href="/terms.html">Terms</a> | <a href="/privacy.html">Privacy</a></p>
+      <p style="margin-top: 1rem;">© 2025 Flood Claim Navigator. Documentation tools only – not legal advice or adjusting.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flood Damage Assessment Tool — Evaluate Your Flood Claim</title>
+  <meta name="description" content="Assess flood damage to your property with professional evaluation tools. Understand structural damage, contents losses, and waterline documentation for FEMA and NFIP claims.">
+  
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #0C4A6E;
+      --primary-dark: #0F172A;
+      --accent: #38BDF8;
+      --text-primary: #0B1220;
+      --text-secondary: #475569;
+      --bg-white: #F8FAFC;
+      --bg-light: #F1F5F9;
+      --border: #CBD5E1;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #ffffff;
+    }
+    
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      border-bottom: 1px solid #e5e7eb;
+    }
+    
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0B2545;
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    
+    .nav-links a {
+      color: #4b5563;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover {
+      color: #17BEBB;
+    }
+    
+    .btn-primary {
+      background: #0C4A6E;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s ease;
+      display: inline-block;
+    }
+    
+    .btn-primary:hover {
+      background: #13a09d;
+    }
+    
+    .hero-section {
+      background: linear-gradient(135deg, #0C4A6E 0%, #38BDF8 45%, #0F172A 100%);
+      padding: 5rem 0;
+      text-align: center;
+      color: white;
+    }
+    
+    .hero-section h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+    }
+    
+    .hero-section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      color: #ffffff;
+    }
+    
+    section {
+      padding: 4rem 0;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #1f2937;
+      text-align: center;
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #4b5563;
+      margin-bottom: 1rem;
+    }
+    
+    ul {
+      list-style: disc;
+      padding-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    ul li {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+    }
+    
+    .content-section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .cta-section {
+      background: #F7F9FC;
+      padding: 3rem 2rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      margin: 3rem auto;
+      max-width: 700px;
+    }
+    
+    .cta-section h3 {
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-section p {
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+    
+    footer {
+      background: #F7F9FC;
+      padding: 3rem 0;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+    }
+    
+    footer p {
+      color: #4b5563;
+      font-size: 0.9rem;
+    }
+    
+    footer a {
+      color: #4b5563;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    
+    footer a:hover {
+      color: #17BEBB;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 1.8rem;
+      }
+      
+      .hero-section {
+        padding: 3rem 0;
+      }
+      
+      section {
+        padding: 2rem 0;
+      }
+      
+      h2 {
+        font-size: 1.6rem;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/" class="logo">Flood Claim Navigator</a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="/" class="btn-primary">Get Flood Claim Help</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="container">
+      <h1>Flood Damage Assessment Tool</h1>
+      <p>Evaluate flood damage to your property with professional assessment tools that meet FEMA and NFIP documentation standards.</p>
+      <a href="/" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Get Help With Your Flood Claim</a>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-section">
+      <h2>Why Flood Damage Assessment Matters</h2>
+      <p>Accurate flood damage assessment is critical for filing a successful FEMA or NFIP claim. Underestimating damage leads to lowball settlements. Missing damage categories results in incomplete claims.</p>
+      
+      <p>Professional flood damage assessment includes:</p>
+      <ul>
+        <li>Structural damage evaluation (foundation, walls, flooring, systems)</li>
+        <li>Contents damage inventory (furniture, appliances, belongings)</li>
+        <li>Waterline documentation and depth measurements</li>
+        <li>Contamination level identification</li>
+        <li>Mold and secondary damage assessment</li>
+        <li>Emergency mitigation requirements</li>
+      </ul>
+      
+      <p>Complete damage assessment ensures you claim all covered damage and provide the evidence FEMA and NFIP adjusters require.</p>
+    </div>
+  </section>
+
+  <section class="container" style="background: #F7F9FC;">
+    <div class="content-section">
+      <h2>What to Assess After Flooding</h2>
+      
+      <h3>Structural Flood Damage</h3>
+      <p>Assess damage to your home's structure and built-in systems:</p>
+      <ul>
+        <li>Foundation cracks, shifting, or water intrusion</li>
+        <li>Wall damage, warping, or water staining</li>
+        <li>Flooring damage (hardwood, tile, carpet)</li>
+        <li>Electrical system damage or water exposure</li>
+        <li>HVAC, furnace, and water heater damage</li>
+        <li>Plumbing system contamination or damage</li>
+        <li>Built-in cabinets and fixtures</li>
+      </ul>
+      
+      <h3>Contents Damage Assessment</h3>
+      <p>Inventory all flood-damaged personal property:</p>
+      <ul>
+        <li>Furniture damaged by floodwater</li>
+        <li>Appliances exposed to contaminated water</li>
+        <li>Electronics and equipment</li>
+        <li>Clothing and textiles</li>
+        <li>Documents and valuable papers</li>
+        <li>Tools and equipment</li>
+      </ul>
+      
+      <h3>Contamination Assessment</h3>
+      <p>Identify contamination levels and sources:</p>
+      <ul>
+        <li>Category 1 (clean water) - rare in flood events</li>
+        <li>Category 2 (gray water) - contaminated with chemicals or waste</li>
+        <li>Category 3 (black water) - sewage, river water, or standing water</li>
+      </ul>
+      
+      <h3>Mold and Secondary Damage</h3>
+      <p>Document mold growth and delayed flood impacts:</p>
+      <ul>
+        <li>Visible mold growth on walls, ceilings, or contents</li>
+        <li>Musty odors indicating hidden mold</li>
+        <li>Warping or swelling from moisture exposure</li>
+        <li>Paint bubbling or peeling</li>
+        <li>Ceiling staining or sagging</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-section">
+      <h2>How to Assess Flood Damage Correctly</h2>
+      <p>Follow these steps for comprehensive flood damage assessment:</p>
+      
+      <ul>
+        <li><strong>Safety first:</strong> Ensure property is safe to enter before assessment</li>
+        <li><strong>Document waterlines:</strong> Measure and photograph waterline marks throughout property</li>
+        <li><strong>Room-by-room assessment:</strong> Evaluate damage systematically in each room</li>
+        <li><strong>Photograph everything:</strong> Take photos of all structural and contents damage</li>
+        <li><strong>Inventory contents:</strong> List all flood-damaged personal property with descriptions and values</li>
+        <li><strong>Identify contamination:</strong> Document contamination sources and floodwater categories</li>
+        <li><strong>Check hidden areas:</strong> Assess basements, crawl spaces, and attics for hidden damage</li>
+        <li><strong>Monitor for mold:</strong> Check for mold growth daily during dry-out process</li>
+      </ul>
+      
+      <p>Thorough damage assessment prevents missing damage categories and supports accurate claim evaluation.</p>
+    </div>
+  </section>
+
+  <div class="cta-section container">
+    <h3>Assess Your Flood Damage Professionally</h3>
+    <p>Stop guessing what damage to claim. Get the complete flood damage assessment system with evaluation checklists, inventory templates, and waterline documentation tools.</p>
+    <a href="/" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Start Your Flood Claim</a>
+  </div>
+
+  <section class="container" style="background: #F7F9FC;">
+    <div class="content-section">
+      <h2>Common Damage Assessment Mistakes</h2>
+      <p>Avoid these errors that weaken flood claims:</p>
+      
+      <ul>
+        <li><strong>Incomplete structural assessment:</strong> Missing hidden damage in walls, ceilings, or systems</li>
+        <li><strong>Poor contents inventory:</strong> No pre-flood valuation or incomplete item descriptions</li>
+        <li><strong>Missing waterline documentation:</strong> No measurements or photos of waterline evidence</li>
+        <li><strong>Ignoring contamination:</strong> Failing to identify and document contamination levels</li>
+        <li><strong>Delayed mold assessment:</strong> Not monitoring for mold growth during dry-out</li>
+        <li><strong>No photo documentation:</strong> Claiming damage without photographic evidence</li>
+      </ul>
+      
+      <p>These assessment gaps give adjusters reasons to question or reduce your flood claim.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-section">
+      <h2>How Flood Claim Navigator Helps</h2>
+      <p>Flood Claim Navigator provides professional flood damage assessment tools:</p>
+      
+      <ul>
+        <li><strong>Damage Assessment Checklists:</strong> Room-by-room evaluation guides for structural and contents damage</li>
+        <li><strong>Contents Inventory Templates:</strong> Track flood-damaged personal property with descriptions and values</li>
+        <li><strong>Waterline Documentation System:</strong> Measure and document waterline evidence correctly</li>
+        <li><strong>Contamination Identification Tools:</strong> Identify and document contamination levels and sources</li>
+        <li><strong>Mold Assessment Guides:</strong> Monitor and document mold growth during dry-out</li>
+        <li><strong>Photo Documentation Checklists:</strong> Ensure you capture all required damage evidence</li>
+        <li><strong>Damage Valuation Tools:</strong> Estimate repair costs and contents replacement values</li>
+      </ul>
+      
+      <p>This system ensures you assess all flood damage categories and provide the complete evidence FEMA and NFIP adjusters require.</p>
+    </div>
+  </section>
+
+  <section class="container" style="background: #F7F9FC;">
+    <div class="content-section">
+      <h2>When to Assess Flood Damage</h2>
+      <p>Timing is critical for flood damage assessment:</p>
+      
+      <ul>
+        <li><strong>Immediately after flooding:</strong> Document waterlines and initial damage as soon as safe</li>
+        <li><strong>During dry-out:</strong> Monitor for mold growth and secondary damage daily</li>
+        <li><strong>Before repairs:</strong> Complete full assessment before starting any repairs or cleanup</li>
+        <li><strong>Before adjuster inspection:</strong> Have complete damage documentation ready for adjuster review</li>
+        <li><strong>After adjuster inspection:</strong> Document any additional damage discovered after initial assessment</li>
+      </ul>
+      
+      <p>Early and thorough damage assessment prevents missing damage categories and supports accurate claim evaluation.</p>
+    </div>
+  </section>
+
+  <div class="cta-section container">
+    <h3>Get the Complete Flood Assessment System</h3>
+    <p>Navigate your flood claim with confidence. Professional damage assessment tools. Complete evaluation checklists. Proper waterline documentation.</p>
+    <a href="/" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Use Flood Claim Navigator</a>
+    <p style="margin-top: 1.5rem; font-size: 0.95rem;"><a href="/" style="color: #0C4A6E; text-decoration: underline;">Return to Flood Claim Navigator Home</a></p>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p><a href="/">Flood Claim Navigator Home</a> | <a href="/#pricing">Pricing</a> | <a href="/terms.html">Terms</a> | <a href="/privacy.html">Privacy</a></p>
+      <p style="margin-top: 1rem;">© 2025 Flood Claim Navigator. Documentation tools only – not legal advice or adjusting.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

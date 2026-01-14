@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flood Insurance Appeal Letter Generator — FEMA & NFIP Appeals</title>
+  <meta name="description" content="Generate professional flood insurance appeal letters for FEMA and NFIP denials. Address denial reasons with proper waterline evidence and contamination documentation.">
+  
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #0C4A6E;
+      --primary-dark: #0F172A;
+      --accent: #38BDF8;
+      --text-primary: #0B1220;
+      --text-secondary: #475569;
+      --bg-white: #F8FAFC;
+      --bg-light: #F1F5F9;
+      --border: #CBD5E1;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #ffffff;
+    }
+    
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      border-bottom: 1px solid #e5e7eb;
+    }
+    
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0B2545;
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    
+    .nav-links a {
+      color: #4b5563;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover {
+      color: #17BEBB;
+    }
+    
+    .btn-primary {
+      background: #0C4A6E;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s ease;
+      display: inline-block;
+    }
+    
+    .btn-primary:hover {
+      background: #13a09d;
+    }
+    
+    .hero-section {
+      background: linear-gradient(135deg, #0C4A6E 0%, #38BDF8 45%, #0F172A 100%);
+      padding: 5rem 0;
+      text-align: center;
+      color: white;
+    }
+    
+    .hero-section h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+    }
+    
+    .hero-section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      color: #ffffff;
+    }
+    
+    section {
+      padding: 4rem 0;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #1f2937;
+      text-align: center;
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #4b5563;
+      margin-bottom: 1rem;
+    }
+    
+    ul {
+      list-style: disc;
+      padding-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    ul li {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+    }
+    
+    .content-section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .cta-section {
+      background: #F7F9FC;
+      padding: 3rem 2rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      margin: 3rem auto;
+      max-width: 700px;
+    }
+    
+    .cta-section h3 {
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-section p {
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+    
+    footer {
+      background: #F7F9FC;
+      padding: 3rem 0;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+    }
+    
+    footer p {
+      color: #4b5563;
+      font-size: 0.9rem;
+    }
+    
+    footer a {
+      color: #4b5563;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    
+    footer a:hover {
+      color: #17BEBB;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 1.8rem;
+      }
+      
+      .hero-section {
+        padding: 3rem 0;
+      }
+      
+      section {
+        padding: 2rem 0;
+      }
+      
+      h2 {
+        font-size: 1.6rem;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/" class="logo">Flood Claim Navigator</a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="/" class="btn-primary">Get Flood Claim Help</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="container">
+      <h1>Flood Insurance Appeal Letter Generator</h1>
+      <p>Generate professional appeal letters for denied FEMA and NFIP flood claims. Address denial reasons directly with proper waterline evidence and contamination documentation.</p>
+      <a href="/" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Get Help With Your Flood Claim</a>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-section">
+      <h2>Why Appeal Letters Matter</h2>
+      <p>Professional appeal letters are critical for overturning denied FEMA and NFIP flood claims. A well-written appeal addresses the specific denial reason, provides missing evidence, and references policy language that supports your claim.</p>
+      
+      <p>Effective flood claim appeal letters include:</p>
+      <ul>
+        <li>Clear identification of the denial reason</li>
+        <li>Direct response to adjuster concerns</li>
+        <li>Reference to specific waterline evidence</li>
+        <li>Contamination documentation and categorization</li>
+        <li>Policy language supporting coverage</li>
+        <li>Professional tone and proper formatting</li>
+      </ul>
+      
+      <p>Generic appeal letters fail because they don't address the specific denial reason. Professional appeal letters succeed by providing the exact evidence that was missing from your original claim.</p>
+    </div>
+  </section>
+
+  <section class="container" style="background: #F7F9FC;">
+    <div class="content-section">
+      <h2>Common Flood Claim Denial Reasons</h2>
+      
+      <h3>"Insufficient Proof of Flood Damage"</h3>
+      <p>This denial means FEMA or NFIP didn't receive adequate waterline evidence. Your appeal must provide complete waterline measurements, depth documentation, photos with scale references, and written affidavits proving flood damage occurred.</p>
+      
+      <h3>"Damage Not Covered Under Policy"</h3>
+      <p>This denial claims damage falls outside policy coverage. Your appeal must reference specific policy language that covers the claimed damage and provide evidence showing damage meets coverage requirements.</p>
+      
+      <h3>"Pre-Existing Damage"</h3>
+      <p>Adjusters claim damage existed before flooding. Your appeal must provide pre-flood photos, maintenance records, and waterline evidence proving damage occurred during the flood event.</p>
+      
+      <h3>"Failure to Mitigate"</h3>
+      <p>This denial claims you didn't take reasonable steps to prevent further damage. Your appeal must provide mitigation logs, receipts, and photos documenting all emergency mitigation efforts.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-section">
+      <h2>What Makes an Effective Appeal Letter</h2>
+      <p>Successful flood claim appeal letters follow a specific structure:</p>
+      
+      <ul>
+        <li><strong>Professional formatting:</strong> Business letter format with proper headers and contact information</li>
+        <li><strong>Clear subject line:</strong> Reference your claim number and appeal purpose</li>
+        <li><strong>Denial reason identification:</strong> State the specific reason for denial from denial letter</li>
+        <li><strong>Direct response:</strong> Address the denial reason with specific evidence</li>
+        <li><strong>Evidence references:</strong> List attached waterline documentation, photos, and affidavits</li>
+        <li><strong>Policy language citations:</strong> Reference specific policy sections supporting coverage</li>
+        <li><strong>Professional tone:</strong> Factual, respectful, and focused on evidence</li>
+        <li><strong>Clear request:</strong> State exactly what you're requesting (reconsideration, reinspection, etc.)</li>
+      </ul>
+      
+      <p>Appeal letters that follow this structure have the highest success rate for overturning flood claim denials.</p>
+    </div>
+  </section>
+
+  <div class="cta-section container">
+    <h3>Generate Professional Appeal Letters</h3>
+    <p>Stop guessing what to write. Get professional flood claim appeal letter templates that address denial reasons directly with proper evidence references.</p>
+    <a href="/" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Start Your Flood Claim</a>
+  </div>
+
+  <section class="container" style="background: #F7F9FC;">
+    <div class="content-section">
+      <h2>Common Appeal Letter Mistakes</h2>
+      <p>Avoid these errors that weaken flood claim appeals:</p>
+      
+      <ul>
+        <li><strong>Generic appeals:</strong> Using template letters that don't address your specific denial reason</li>
+        <li><strong>Emotional language:</strong> Focusing on frustration instead of evidence and policy language</li>
+        <li><strong>Missing evidence:</strong> Referencing evidence without actually attaching documentation</li>
+        <li><strong>No policy citations:</strong> Failing to reference specific policy sections supporting coverage</li>
+        <li><strong>Poor formatting:</strong> Unprofessional appearance that undermines credibility</li>
+        <li><strong>Vague requests:</strong> Not clearly stating what you want the insurer to do</li>
+        <li><strong>Missing deadlines:</strong> Submitting appeals after appeal deadline has passed</li>
+      </ul>
+      
+      <p>These mistakes give adjusters reasons to deny your appeal without proper consideration.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-section">
+      <h2>How Flood Claim Navigator Helps</h2>
+      <p>Flood Claim Navigator provides professional appeal letter generation tools:</p>
+      
+      <ul>
+        <li><strong>Denial Reason Analyzer:</strong> Identify your specific denial reason and required evidence</li>
+        <li><strong>Appeal Letter Templates:</strong> Professional templates for each common denial reason</li>
+        <li><strong>Evidence Reference Builder:</strong> Automatically reference attached waterline documentation and photos</li>
+        <li><strong>Policy Language Database:</strong> Access relevant policy sections supporting your claim</li>
+        <li><strong>Professional Formatting:</strong> Generate properly formatted business letters</li>
+        <li><strong>Deadline Tracking:</strong> Never miss critical appeal deadlines</li>
+        <li><strong>Evidence Checklist:</strong> Ensure you attach all required documentation</li>
+      </ul>
+      
+      <p>This system ensures your appeal letter addresses the denial reason directly with the specific evidence and policy references needed for success.</p>
+    </div>
+  </section>
+
+  <section class="container" style="background: #F7F9FC;">
+    <div class="content-section">
+      <h2>Appeal Deadlines and Process</h2>
+      <p>FEMA and NFIP have strict appeal deadlines that must be followed:</p>
+      
+      <ul>
+        <li><strong>NFIP Appeals:</strong> Typically 60 days from denial letter date</li>
+        <li><strong>FEMA Appeals:</strong> Varies by program—check denial letter for specific deadline</li>
+        <li><strong>State Appeals:</strong> Some states provide additional appeal rights with different timeframes</li>
+      </ul>
+      
+      <p>Missing appeal deadlines closes your appeal rights permanently. Submit appeals well before deadline to ensure timely receipt.</p>
+      
+      <h3>Appeal Submission Requirements</h3>
+      <ul>
+        <li>Original appeal letter with signature</li>
+        <li>Copy of denial letter</li>
+        <li>All supporting waterline documentation</li>
+        <li>Photos with scale references</li>
+        <li>Written affidavits</li>
+        <li>Policy language citations</li>
+        <li>Proof of mailing (certified mail recommended)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-section">
+      <h2>What to Include With Your Appeal</h2>
+      <p>Successful appeals include complete evidence packages:</p>
+      
+      <ul>
+        <li><strong>Waterline Documentation:</strong> Measurements, photos with scale, and written descriptions</li>
+        <li><strong>Contamination Evidence:</strong> Documentation of contamination sources and categories</li>
+        <li><strong>Mitigation Logs:</strong> Records of emergency mitigation efforts with dates and receipts</li>
+        <li><strong>Pre-Flood Evidence:</strong> Photos or records showing property condition before flooding</li>
+        <li><strong>Expert Statements:</strong> Contractor estimates or professional assessments if available</li>
+        <li><strong>Policy Documents:</strong> Relevant policy sections supporting your coverage claim</li>
+      </ul>
+      
+      <p>Complete evidence packages prevent "insufficient documentation" denials on appeal.</p>
+    </div>
+  </section>
+
+  <div class="cta-section container">
+    <h3>Get Professional Appeal Letter Tools</h3>
+    <p>Navigate your flood claim appeal with confidence. Professional letter templates. Complete evidence checklists. Deadline tracking. Policy language references.</p>
+    <a href="/" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Use Flood Claim Navigator</a>
+    <p style="margin-top: 1.5rem; font-size: 0.95rem;"><a href="/" style="color: #0C4A6E; text-decoration: underline;">Return to Flood Claim Navigator Home</a></p>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p><a href="/">Flood Claim Navigator Home</a> | <a href="/#pricing">Pricing</a> | <a href="/terms.html">Terms</a> | <a href="/privacy.html">Privacy</a></p>
+      <p style="margin-top: 1rem;">© 2025 Flood Claim Navigator. Documentation tools only – not legal advice or adjusting.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

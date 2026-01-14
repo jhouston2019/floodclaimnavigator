@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flood Damage to Home & Contents — Document Your Flood Claim</title>
+  <meta name="description" content="Learn how to document flood damage to your home and contents. Understand contamination levels, waterline evidence, and proper valuation for FEMA and NFIP claims.">
+  
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #0C4A6E;
+      --primary-dark: #0F172A;
+      --accent: #38BDF8;
+      --text-primary: #0B1220;
+      --text-secondary: #475569;
+      --bg-white: #F8FAFC;
+      --bg-light: #F1F5F9;
+      --border: #CBD5E1;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #ffffff;
+    }
+    
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      border-bottom: 1px solid #e5e7eb;
+    }
+    
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0B2545;
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    
+    .nav-links a {
+      color: #4b5563;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover {
+      color: #17BEBB;
+    }
+    
+    .btn-primary {
+      background: #0C4A6E;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s ease;
+      display: inline-block;
+    }
+    
+    .btn-primary:hover {
+      background: #13a09d;
+    }
+    
+    .hero-section {
+      background: linear-gradient(135deg, #0C4A6E 0%, #38BDF8 45%, #0F172A 100%);
+      padding: 5rem 0;
+      text-align: center;
+      color: white;
+    }
+    
+    .hero-section h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+    }
+    
+    .hero-section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      color: #ffffff;
+    }
+    
+    section {
+      padding: 4rem 0;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #1f2937;
+      text-align: center;
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #4b5563;
+      margin-bottom: 1rem;
+    }
+    
+    ul {
+      list-style: disc;
+      padding-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    ul li {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #4b5563;
+      margin-bottom: 0.5rem;
+    }
+    
+    .content-section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .cta-section {
+      background: #F7F9FC;
+      padding: 3rem 2rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      margin: 3rem auto;
+      max-width: 700px;
+    }
+    
+    .cta-section h3 {
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-section p {
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+    
+    footer {
+      background: #F7F9FC;
+      padding: 3rem 0;
+      border-top: 1px solid #e5e7eb;
+      text-align: center;
+    }
+    
+    footer p {
+      color: #4b5563;
+      font-size: 0.9rem;
+    }
+    
+    footer a {
+      color: #4b5563;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    
+    footer a:hover {
+      color: #17BEBB;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 1.8rem;
+      }
+      
+      .hero-section {
+        padding: 3rem 0;
+      }
+      
+      section {
+        padding: 2rem 0;
+      }
+      
+      h2 {
+        font-size: 1.6rem;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/" class="logo">Flood Claim Navigator</a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="/" class="btn-primary">Get Flood Claim Help</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="container">
+      <h1>Flood Damage to Home & Contents</h1>
+      <p>Understand how to document flood damage to your property and belongings with the waterline evidence and contamination tracking that FEMA and NFIP require.</p>
+      <a href="/" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Get Help With Your Flood Claim</a>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-section">
+      <h2>Understanding Flood Damage Documentation</h2>
+      <p>Flood damage affects both your home's structure and your personal belongings—but FEMA and NFIP require different documentation for each type of damage.</p>
+      
+      <p>The key to proper flood damage documentation is understanding:</p>
+      <ul>
+        <li>Waterline height and standing water duration</li>
+        <li>Contamination levels (clean, gray, or black water)</li>
+        <li>Structural damage vs. contents damage</li>
+        <li>Emergency mitigation steps taken</li>
+        <li>Secondary damage from mold and moisture</li>
+      </ul>
+      
+      <p>Without proper documentation of these elements, flood claims get delayed, underpaid, or denied—not because the damage isn't real, but because the required evidence wasn't provided correctly.</p>
+    </div>
+  </section>
+
+  <section class="container" style="background: #F7F9FC;">
+    <div class="content-section">
+      <h2>Types of Flood Damage</h2>
+      
+      <h3>Structural Flood Damage</h3>
+      <p>Structural flood damage includes damage to your home's foundation, walls, flooring, electrical systems, HVAC, and built-in fixtures. FEMA and NFIP require waterline measurements and depth documentation to evaluate structural damage accurately.</p>
+      
+      <h3>Contents Damage from Flooding</h3>
+      <p>Flood-damaged contents include furniture, appliances, electronics, clothing, and personal belongings. Contaminated floodwater requires different valuation than clean water damage—adjusters need proper categorization to evaluate your claim.</p>
+      
+      <h3>Contaminated Floodwater Damage</h3>
+      <p>Floodwater contamination levels determine coverage and valuation. Category 3 (black water) contamination from sewage, rivers, or standing water requires complete disposal of affected contents—not cleaning or restoration.</p>
+      
+      <h3>Mold and Secondary Damage</h3>
+      <p>Flood damage often leads to mold growth, warping, and secondary moisture damage. These must be identified and documented separately to ensure they're included in your claim evaluation.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-section">
+      <h2>Common Documentation Mistakes</h2>
+      <p>Most flood victims make these documentation errors that weaken their claims:</p>
+      
+      <ul>
+        <li><strong>Missing waterline evidence:</strong> No photos or measurements of waterline height and depth</li>
+        <li><strong>Incomplete contamination documentation:</strong> Failing to identify contamination levels and sources</li>
+        <li><strong>Poor contents inventory:</strong> No pre-flood valuation or proper categorization of damaged items</li>
+        <li><strong>No mitigation logs:</strong> Missing documentation of emergency dry-out and water extraction efforts</li>
+        <li><strong>Delayed damage identification:</strong> Not documenting mold and secondary damage as it develops</li>
+      </ul>
+      
+      <p>These gaps give adjusters reasons to delay, reduce, or deny your flood claim—even when the damage is legitimate.</p>
+    </div>
+  </section>
+
+  <div class="cta-section container">
+    <h3>Document Your Flood Damage Correctly</h3>
+    <p>Stop guessing what evidence FEMA and NFIP need. Get the complete flood damage documentation system with waterline tracking, contamination logs, and contents valuation tools.</p>
+    <a href="/" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Start Your Flood Claim</a>
+  </div>
+
+  <section class="container" style="background: #F7F9FC;">
+    <div class="content-section">
+      <h2>How Flood Claim Navigator Helps</h2>
+      <p>Flood Claim Navigator provides the complete documentation system for tracking flood damage to your home and contents:</p>
+      
+      <ul>
+        <li><strong>Waterline Documentation Templates:</strong> Record waterline height, depth measurements, and standing water duration with precision</li>
+        <li><strong>Contamination Tracking Tools:</strong> Identify and document contamination levels for proper claim evaluation</li>
+        <li><strong>Contents Valuation System:</strong> Track and value flood-damaged contents with proper categorization</li>
+        <li><strong>Mitigation Log Templates:</strong> Document emergency mitigation, dry-out sequencing, and water extraction efforts</li>
+        <li><strong>Mold & Secondary Damage Identifier:</strong> Track mold growth and delayed flood impacts as they develop</li>
+      </ul>
+      
+      <p>This system ensures you have the waterline evidence, contamination documentation, and contents tracking that FEMA and NFIP adjusters require.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-section">
+      <h2>Why Waterline Documentation Matters</h2>
+      <p>Waterline evidence is the foundation of every flood claim. Without proper waterline documentation, adjusters cannot accurately evaluate:</p>
+      
+      <ul>
+        <li>The extent of structural damage</li>
+        <li>Which contents were affected by floodwater</li>
+        <li>Contamination levels and exposure duration</li>
+        <li>Emergency mitigation requirements</li>
+        <li>Secondary damage from moisture and mold</li>
+      </ul>
+      
+      <p>FEMA and NFIP require waterline measurements, photos, and affidavits to process flood claims. Flood Claim Navigator ensures you have this critical evidence documented correctly.</p>
+    </div>
+  </section>
+
+  <div class="cta-section container">
+    <h3>Get the Complete Flood Documentation System</h3>
+    <p>Navigate your flood damage claim with confidence. Professional waterline documentation. Proper contamination tracking. Complete contents valuation.</p>
+    <a href="/" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Use Flood Claim Navigator</a>
+    <p style="margin-top: 1.5rem; font-size: 0.95rem;"><a href="/" style="color: #0C4A6E; text-decoration: underline;">Return to Flood Claim Navigator Home</a></p>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p><a href="/">Flood Claim Navigator Home</a> | <a href="/#pricing">Pricing</a> | <a href="/terms.html">Terms</a> | <a href="/privacy.html">Privacy</a></p>
+      <p style="margin-top: 1rem;">© 2025 Flood Claim Navigator. Documentation tools only – not legal advice or adjusting.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
